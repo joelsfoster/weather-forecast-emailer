@@ -2,9 +2,7 @@ import requests
 
 # Get the weather forecast for today
 def get_weather_forecast():
-    # Note to dev: add affordances for two-word names like "New York"
     zip_code = input("What is your ZIP code?")
-    #
     country_code = "us"
     url ='http://api.openweathermap.org/data/2.5/weather?zip=' + zip_code + ',' + country_code + '&units=metric&appid=7477fad7ebe10ae26c2d45c57dc4e96f'
     weather_request = requests.get(url)
